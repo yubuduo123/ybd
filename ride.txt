@@ -1,0 +1,21 @@
+https://blog.csdn.net/wangjingna/article/details/49782001
+https://blog.csdn.net/zhaoteng345/article/details/42873639
+
+wxpython, robotframework, robotframework-ride
+
+ride.py	打开RIDE
+
+菜单栏的 File—> New Project—> Directory			创建一个新的工程
+右击新创建的文件“testBaidu”——>点击“New Suite		创建测试套
+右击新创建的文件“New Test Case”——>点击“New Suite		创建测试用例
+
+点击创建好的测试套，选择添加Library		文件名是黑色的，如果是红色，则说明加载不成功
+
+Scalar		${name}			使用变量
+List Variable	@{mylist}			列表
+User Keyword	test			相当于封装了一个函数， 可以直接调用， 可传参Arguments:${name}， 出参Return Value:${name}
+
+log	打印日志		${name}		@{mylist}[0]
+test	使用封装的关键字
+
+有时封装的函数很多，有时会记不得这时输入第一个函数名称再按Ctrl+Alt+空格会自动匹配，如：输入S，再按快捷键，会弹出所有S开始的函数名
