@@ -1,0 +1,55 @@
+https://www.liaoxuefeng.com/wiki/896043488029600/896067074338496
+
+$ git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"
+
+$ mkdir learngit
+$ cd learngit
+$ pwd
+/Users/michael/learngit
+
+$ git init		把这个目录变成Git可以管理的仓库：		创建了唯一一个master分支
+
+ls -ah		可查看隐藏目录.git
+
+
+$ git add readme.txt			把文件修改添加到暂存区
+$ git commit -m "wrote a readme file"	把暂存区的所有内容提交到当前分支
+git status
+git diff	顾名思义就是查看difference
+git diff HEAD -- readme.txt命令可以查看工作区和版本库里面最新版本的区别
+git log	告诉我们历史记录
+
+
+git reset --hard "HEAD^"	返回上个版本
+$ git reset --hard 1094a	到某个版本commit id
+git reflog			用来记录你的每一次命令
+
+
+git checkout -- file		可以丢弃工作区的修改；  如果已经加入到暂存区后且修改，则工作区变为暂存区的数据
+git reset HEAD file		可以把暂存区的修改撤销掉（暂存区清空）
+
+
+$ git rm test.txt  		删除文件后也要commit
+$ git checkout -- test.txt	删除后也可以复原
+
+
+ssh-keygen -t rsa -C "625853047@qq.com"		id_rsa是私钥  github的setting将公钥复制进ssh里
+git remote add origin https://github.com/yubuduo123/-.git	关联一个远程库
+$ git push -u origin master			第一次-u 互相关联
+
+
+git branch		查看所有分支
+git branch develop		创建分支
+git checkout develop	切换分支
+git checkout -b <name>	创建+切换分支
+git push origin develop	提交分支
+git merge dev		把dev分支合并到当前分支
+git branch -d dev		删除分支（-D强行删除）
+git log --graph命令可以看到分支合并图
+
+
+git remote -v		显示更详细的信息
+git pull			抓取远程的新提交
+git checkout -b branch-name origin/branch-name		本地创建和远程分支对应的分支
+git branch --set-upstream branch-name origin/branch-name	建立本地分支和远程分支的关联
